@@ -5,7 +5,7 @@ resource "aws_subnet" "private_subnet_1a" {
   availability_zone = "eu-north-1a"
 
   tags = {
-    Name = format("private_subnet_1a-%s", var.project-name)
+    Name = format("private_subnet_1a-%s", var.project_name)
   }
 }
 
@@ -16,7 +16,7 @@ resource "aws_subnet" "private_subnet_1b" {
   availability_zone = "eu-north-1b"
 
   tags = {
-    Name = format("private_subnet_1b-%s", var.project-name)
+    Name = format("private_subnet_1b-%s", var.project_name)
   }
 }
 

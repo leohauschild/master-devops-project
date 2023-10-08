@@ -2,7 +2,7 @@ resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.project_vpc.id
 
   tags = {
-    Name = format("gw-%s", var.project-name)
+    Name = format("gw-%s", var.project_name)
   }
 }
 
@@ -10,7 +10,7 @@ resource "aws_route_table" "igw_route_table" {
   vpc_id = aws_vpc.project_vpc.id
 
   tags = {
-    Name = format("public-router-%s", var.project-name)
+    Name = format("public-router-%s", var.project_name)
   }
 }
 
