@@ -6,7 +6,7 @@ resource "aws_subnet" "public_subnet_1a" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = format("public_subnet_1a-%s", var.project-name)
+    Name = format("public_subnet_1a-%s", var.project_name)
   }
 }
 
@@ -18,7 +18,7 @@ resource "aws_subnet" "public_subnet_1b" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = format("public_subnet_1b-%s", var.project-name)
+    Name = format("public_subnet_1b-%s", var.project_name)
   }
 }
 

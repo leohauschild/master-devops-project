@@ -2,7 +2,7 @@ resource "aws_eip" "vpc_eip" {
   domain = "vpc"
 
   tags = {
-    Name = format("vpc-eip-%s", var.project-name)
+    Name = format("vpc-eip-%s", var.project_name)
   }
 }
 
@@ -11,7 +11,7 @@ resource "aws_nat_gateway" "nat_gw" {
   subnet_id     = aws_subnet.public_subnet_1a.id
 
   tags = {
-    Name = format("nat-gw-%s", var.project-name)
+    Name = format("nat-gw-%s", var.project_name)
   }
 }
 
@@ -19,7 +19,7 @@ resource "aws_route_table" "nat_route_table" {
   vpc_id = aws_vpc.project_vpc.id
 
   tags = {
-    Name = format("nat-route-table-%s", var.project-name)
+    Name = format("nat-route-table-%s", var.project_name)
   }
 }
 
