@@ -2,7 +2,7 @@ resource "aws_subnet" "private_subnet_1a" {
   vpc_id = aws_vpc.project_vpc.id
 
   cidr_block        = "10.0.32.0/20"
-  availability_zone = "eu-north-1a"
+  availability_zone = "${var.aws_region}a" #"eu-north-1a"
 
   tags = {
     Name = format("private_subnet_1a-%s", var.project_name)
@@ -13,7 +13,7 @@ resource "aws_subnet" "private_subnet_1b" {
   vpc_id = aws_vpc.project_vpc.id
 
   cidr_block        = "10.0.48.0/20"
-  availability_zone = "eu-north-1b"
+  availability_zone = "${var.aws_region}b" #"eu-north-1b"
 
   tags = {
     Name = format("private_subnet_1b-%s", var.project_name)
